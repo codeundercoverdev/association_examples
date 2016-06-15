@@ -3,6 +3,6 @@ class SchoolsController < ApplicationController
 		# @school = School.where(name: params[:id]).first
 		@school = School.find(params[:id])
 		puts "@school is #{@school.inspect}"
-		head 200
+		render json: @school
 	end
 end
